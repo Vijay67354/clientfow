@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"
+/>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="script2.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+    .checked {
+        color: orange;
+    }
+</style>
+<style>
+    .headslider {
+        position: relative;
+        height: 100%;
+    }
+    
+    body {
+        background: #ffffff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+    }
+    
+    swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    
+    swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+</style>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .column {
+        float: left;
+        width: 100%;
+        padding: 10px;
+    }
+    /* Responsive columns */
+    
+    @media screen and (min-width: 600px) {
+        .column {
+            width: 50%;
+        }
+    }
+    
+    @media screen and (min-width: 900px) {
+        .column {
+            width: 25%;
+        }
+    }
+    /* Style the counter cards */
+    
+    .card {
+        padding: 16px;
+        text-align: center;
+        color: white;
+    }
+    
+    .galaxy {
+        background-image: url('/images/gallaxy.jpg');
+        width: 90%;
+        /* height: 40vh; */
+        border-radius: 150px;
+        background-size: cover;
+        margin: 0 auto;
+    }
+    
+    #Partners,
+    #Projects,
+    #Clients {
+        font-size: 3vw;
+        /* Adjust the font size for responsiveness */
+        font-weight: 700;
+        line-height: 1.16;
+    }
+    
+    .totalyears {
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--clr-common-white);
+        font-family: "Archivo", sans-serif;
+        line-height: 1.5;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+    }
+    /* Additional style for the rotating text */
+    
+    #rotatingText {
+        margin-top: 20px;
+    }
+    
+    .text {
+        letter-spacing: 0.2em;
+        /* Adjust as needed */
+        font-weight: bold;
+        color: white;
+    }
+</style>
+<style>
+    .text {
+        font-weight: 600;
+        letter-spacing: 1.7px;
+        text-transform: uppercase;
+        font-family: 'Kanit';
+        font-size: 17px;
+        fill: #111;
+        text-shadow: 2px 0px #ffffff;
+    }
+    
+    #rotatingText {
+        animation-name: rotate-circle;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes rotate-circle {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+    
+    .main {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .main img {
+        position: absolute;
+    }
+    
+    .main img {
+        position: absolute;
+        animation-name: rotate-circle;
+        animation-direction: reverse;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        filter: drop-shadow(0px 0px 5px #333);
+    }
+</style>
+
+
+<style>
+    .designdevelopemrnt {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: grid;
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+    
+    .seaocmapaign {
+        border: 1px solid rgb(79, 79, 79);
+        padding: 45px 45px 65px;
+    }
+    /*  */
+    
+    .seaocmapaign {
+        position: relative;
+        display: inline-block;
+        /* Ensures the background covers only the content */
+    }
+    
+    .seaocmapaign:hover {
+        background-color: blue;
+        /* Change the background color on hover */
+    }
+    
+    .fa-arrow-right {
+        transform: rotate(-34deg);
+        transition: transform 0.3s ease-in-out;
+        /* Add a smooth transition effect */
+    }
+    
+    .seaocmapaign:hover .fa-arrow-right {
+        transform: rotate(0deg);
+        /* Rotate the arrow back to its original position on hover */
+    }
+    
+    .vertical-text {
+        writing-mode: vertical-rl;
+        color: white;
+        opacity: 1;
+        text-align: center;
+        /* Initially set the opacity to 1 (visible) */
+        transition: opacity 0.3s ease-in-out;
+        /* Add a smooth transition effect */
+    }
+    
+    .seodes {
+        opacity: 0;
+        /* Initially set the opacity to 0 (hidden) */
+        transition: opacity 0.3s ease-in-out;
+        /* Add a smooth transition effect */
+    }
+    
+    .seaocmapaign:hover .vertical-text {
+        opacity: 0;
+        /* Hide the vertical text on hover */
+    }
+    
+    .seaocmapaign:hover .seodes {
+        opacity: 1;
+        /* Show the other elements on hover */
+    }
+    
+    .cards {
+        margin: 0 auto;
+        display: grid;
+        gap: 1rem;
+    }
+    
+    .audiencedefinition {
+        margin: 0 auto;
+        display: grid;
+        gap: 2rem;
+        padding: 40px;
+    }
+    
+    .framerworkvalue {
+        border: 1px solid black;
+        padding: 50px;
+        text-align: center;
+    }
+    
+    .audiences {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 18px;
+        color: white;
+    }
+    
+    .audiencess {
+        font-size: 32px;
+        margin-top: 20px;
+        color: white;
+    }
+    
+    .workingphoto {
+        width: 60%;
+        text-align: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    
+    .headerbusines {
+        text-align: center;
+    }
+    
+    .thouhgt {
+        font-size: 42px;
+    }
+    
+    .berries {
+        display: grid;
+        margin: 0 auto;
+        padding-top: 60px;
+        padding-bottom: 90px;
+        gap: 3rem;
+    }
+    
+    .cimplifeegood {
+        margin: 0 auto;
+        display: grid;
+        max-width: 1450px;
+    }
+    
+    .agencythr {
+        margin: 0 auto;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @media (min-width: 375px) {
+        .nutrithings {
+            width: 100px;
+        }
+        .FEATUREDPROJECTS {
+            font-size: 20px;
+        }
+        .designdevelopemrnt {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .berries {
+            grid-template-columns: repeat(1, 1fr);
+            margin: 0 auto;
+        }
+        .looginforagency {
+            font-size: 22px;
+        }
+    }
+    
+    @media (min-width: 601px) {
+        .berries {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .FEATUREDPROJECTS {
+            font-size: 70px;
+        }
+    }
+    
+    @media only screen and (max-width: 1300px) and (min-width: 900px) {
+        .cards {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .audiencedefinition {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .cimplifeegood {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .looginforagency {
+            font-size: 62px;
+        }
+        .awards {
+            font-size: 22px;
+        }
+    }
+    
+    @media only screen and (max-width: 2800px) and (min-width: 500px) {
+        .designdevelopemrnt {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .berries {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0 auto;
+        }
+        .cards {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        .looginforagency {
+            font-size: 92px;
+        }
+        .nutrithings {
+            width: 700px;
+        }
+        .cards {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .cimplifeegood {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .audiencedefinition {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .agencythr {
+            grid-template-columns: repeat(2, 1fr);
+            padding-top: 13rem;
+        }
+        .awards {
+            font-size: 22px;
+        }
+        .about__content {
+            font-size: 24px;
+            color: #222222;
+            font-family: 'Archivo', sans-serif;
+            line-height: 40px;
+            font-weight: 300 !important;
+        }
+        .awardswin {
+            font-size: 72px;
+            font-family: 'Archivo', sans-serif;
+        }
+        .numberdigi {
+            font-size: 70px;
+            font-family: 300 !important;
+        }
+    }
+    
+    .imagesfeame {
+        border-radius: 100px;
+    }
+    
+    .workingprocess {
+        font-size: 20px;
+        color: #004AAD;
+    }
+    
+    .framerworkvalue:hover {
+        background-color: #004AAD;
+    }
+</style>
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+    * {
+        cursor: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body,
+    html {
+        width: 100%;
+        height: 100%;
+    }
+    
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-family: montserrat;
+        /* font-size: 40px; */
+    }
+    
+    a {
+        font-family: Montserrat;
+        position: relative;
+        text-decoration: none;
+    }
+    
+    a:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        display: block;
+        margin-top: 0px;
+        left: 0%;
+        background: rgb(0, 13, 255);
+        transition: width .3s ease;
+    }
+    
+    a:hover:after {
+        width: 100%;
+        left: 0%;
+        background: rgb(0, 13, 255);
+    }
+    
+    .cursor {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 1px solid rgb(0, 13, 255);
+        transition: all 200ms ease-out;
+        position: fixed;
+        pointer-events: none;
+        left: 0;
+        top: 0;
+        transform: translate(calc(-50% + 15px), -50%);
+    }
+    
+    .cursor2 {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        background-color: rgb(0, 47, 255);
+        opacity: .3;
+        position: fixed;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: width .3s, height .3s, opacity .3s;
+    }
+    
+    .hover {
+        background-color: rgb(0, 13, 255);
+        opacity: 0.5;
+    }
+    
+    .cursorinnerhover {
+        width: 20px;
+        height: 20px;
+        opacity: .5;
+    }
+</style>
+</head>
+
+
+<body>
+    <section>
+
+
+    </section>
+    <div class="cursor"></div>
+    <div class="cursor2"></div>
+    <div class="herobg" style="background-image: url('images/hero-bg-1.jpg'); width: 100%; height: 100vh; object-fit: cover; ">
+
+        <div class="scroll" style="margin-left: 20px;">
+            <img src="images/dial-pad.png" style="position: absolute; left: 0; writing-mode: vertical-rl; color: white; padding-top: 22rem;">
+            <h1 class="vertical-text" style="position: absolute; left: 0; writing-mode: vertical-rl; color:#222222; padding-top: 25rem; font-size: 20px; font-family: 'Archivo', sans-serif;">+91 8076805641</h1>
+
+            <h1 class="vertical-text" style="position: absolute; left: 0; writing-mode: vertical-rl; color:#222222; padding-top: 43rem; font-size: 20px; font-family: 'Archivo', sans-serif;">SCROLL</h1>
+        </div>
+
+        <div class="agencythr" style="align-items: center; place-items: center; position: relative;">
+
+            <div class="loggoinfor">
+                <h1 class="looginforagency" style="font-weight: 600 !important; color: rgb(0, 0, 0); font-family: 'Archivo Black', sans-serif;
+                ">THE AGENCY</h1>
+                <h1 class="looginforagency" style=" color: #004AAD; font-weight: 600 !important;  font-family: 'Archivo Black', sans-serif;">YOU'VE BEEN</h1>
+                <h1 class="looginforagency" style="font-weight: 600 !important; color: rgb(0, 0, 0); font-family: 'Archivo Black', sans-serif; ">LOOKING FOR</h1>
+
+            </div>
+            <div>
+                <p class="awards" style="font-size: 300; color: #222222; line-height: 36px; font-family: 'Tenor Sans', sans-serif;">Cimplifie is a full-service , award-winning</p>
+                <div style="">
+                    <p1 class="awards" style=" color: #222222;  font-family: 'Tenor Sans', sans-serif; line-height: 36px;">digital agency with expertise in brand &</p1>
+                </div>
+                <div style="">
+                    <p1 class="awards" style=" color: #222222; font-family: 'Tenor Sans', sans-serif; line-height: 36px;">digital strategy, design and experience.</p1>
+                </div>
+                <div class="main" style="display: grid;
+                align-items: center;
+                justify-items: end; margin-bottom: -220px;">
+
+                    <img src="images/play.png" width="50" height="50" style="margin-right: 70px;">
+                    <svg id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+                      <defs>
+                        <path id="circle" d="M 100, 100
+                                m -75, 0
+                                a 75, 75 0 1, 0 150, 0
+                                a 75, 75 0 1, 0 -150, 0
+                                ">
+                        </path>
+                      </defs>
+                      <text width="400">
+                        <textPath alignment-baseline="top" xlink:href="#circle" class="text" style="letter-spacing: 9px; font-weight:bold; color:white">
+                         Winning Awards Digital Agency
+                        </textPath>
+                      </text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="leadlogo">
+
+
+        <h2 class="brand-area__title" style="    font-size: 20px;
+        font-weight: 600; font-family: 'Archivo', sans-serif;">
+            Trusted by industry-leading organizations including
+        </h2>
+        <div class="headslider">
+            <swiper-container class="mySwiper" init="false" pagination="true" pagination-clickable="true" navigation="true" space-between="30" centered-slides="true" autoplay-delay="2500" autoplay-disable-on-interaction="false">
+                <swiper-slide>
+                    <img src="images/CeeDee (1).png" style="width: 275px;
+                height: 80px;">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="images/Gtown.jpg.png" style="width: 395px;
+                height: 76px;">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="images/imagesyogabar.png" style="width: 75px;
+                height: 76px;">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="images/molecule.jpg.png" style="width: 275px;
+                height: 76px;">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="images/imagesyogabar.png" style="width: 75px;
+                height: 76px;">
+                </swiper-slide>
+                <swiper-slide>
+                    <img src="images/molecule.jpg.png" style="width: 275px;
+                height: 76px;">
+                </swiper-slide>
+            </swiper-container>
+
+        </div>
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    </div>
+
+    <div class="galaxy">
+        <div class="row">
+            <div class="column">
+                <div class="card" style="margin-top: 70px;">
+                    <h3><span id="Partners">0</span></h3>
+                    <h3 class="totalyears" style="font-family: 'Archivo', sans-serif; font-weight: 600; margin-top: 9px;">ToTal Years of Experience</h3>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card" style="margin-top: 70px;">
+                    <h3><span id="Projects">0</span>+</h3>
+                    <h3 class="totalyears" style="font-family: 'Archivo', sans-serif; font-weight: 600; margin-top: 9px;">Unique Clients We Serve</h3>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="main">
+
+                        <img src="https://www.kirupa.com/icon/1f354.svg" width="50" height="50">
+                        <svg id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+                          <defs>
+                            <path id="circle" d="M 100, 100
+                                    m -75, 0
+                                    a 75, 75 0 1, 0 150, 0
+                                    a 75, 75 0 1, 0 -150, 0
+                                    ">
+                            </path>
+                          </defs>
+                          <text width="400">
+                            <textPath alignment-baseline="top" xlink:href="#circle" class="text" style="letter-spacing: 9px;  color:white; font-family: 'Archivo', sans-serif; font-weight: 600;">
+                             Winning Awards Digital Agency
+                            </textPath>
+                          </text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card" style="margin-top: 70px;">
+                    <h3><span id="Clients">0</span>+</h3>
+                    <h3 class="totalyears" style="font-family: 'Archivo', sans-serif; font-weight: 600; margin-top: 9px;">Team Members</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="offeradacius">
+            <div class="section__subtitle-icon">
+                <img src="images/starwar.png" alt="image not found">
+            </div>
+            <p class="section__subtitle-text">
+                We create audience-first brand experiences
+            </p>
+
+            <div class="form" style="text-align: center;">
+                <p1 class="about__content" style="text-align: center; font-family: 'Archivo', sans-serif;">Cimplifie offers audacious brands a full-service branding, creative design, and marketing team .</p1>
+                <div>
+                    <p2 class="about__content" style="text-align: center; font-family: 'Archivo', sans-serif;">dedicated to doing whatever it takes to see your business grow. We partner with clients and brands</p2>
+                </div>
+                <div>
+                    <p3 class="about__content" style="text-align: center; font-family: 'Archivo', sans-serif;"> from a wide spectrum of industries who are looking for their next big idea, direction, or tool that will </p3>
+
+                </div>
+                <div>
+                    <p4 class="about__content" style="text-align: center; font-family: 'Archivo', sans-serif;">take their business to a higher level</p4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <marquee class="awardswin" width="100%" direction="left" height="100px" style="font-weight: bold; text-transform: uppercase; color: black; font-weight: bold;">
+        AWARD-WINNING UX/UI Design .
+    </marquee>
+
+    <marquee class="numberdigi" width="100%" direction="right" height="100px" style="     font-weight: 300;
+    line-height: 1.08;
+    font-family: Tenor Sans, sans-serif;
+    white-space: nowrap;
+    margin-bottom: 0; ">
+        NUMBER #1 DIGITAL AGENCY IN TOWN .
+    </marquee>
+
+
+
+
+
+
+
+    <div class="whatwedo">
+        <img src="images/starwar.png" style="margin-bottom: 10px; margin-top: 20px; ">
+        <p class="section__subtitle-text" style="    font-size: 20px;
+        font-weight: 400;
+        color: var(--clr-theme-2) !important;
+        line-height: 22px;
+        margin-bottom: 20px; color: #004AAD; text-align: left; ">Our Services</p>
+        <div class="whatwedotext">
+            <div>
+                <h1 class="whatwedo">what we do</h1>
+            </div>
+            <div class="viewservice">
+                <h4 class="viewservice">View All Services</h4>
+            </div>
+
+        </div>
+    </div>
+    <div class="webdesigndevloperseo" style="background-image: url('/images/cube-dot-bg.jpg'); ">
+
+
+        <div class="designdevelopemrnt">
+            <div class="seaocmapaign">
+
+                <h1 class="vertical-text" style="writing-mode: vertical-rl; color: white;">Web Design & Development</h1>
+                <h1 class="seodes">Web design & developeemnt</h1>
+                <p class="seodes">Cometive wen learing</p>
+                <p class="seodes">dadad</p>
+                <p class="seodes">dadsads</p>
+
+
+                <i class="fa-solid fa-arrow-right" style="color: red;"></i>
+            </div>
+            <div class="seaocmapaign">
+                <h1 class="vertical-text" style="writing-mode: vertical-rl; color: white;">Web Design & Development</h1>
+
+            </div>
+            <div class="seaocmapaign">
+                <h1 style="writing-mode: vertical-rl; color: white;">Web Design & Development</h1>
+
+            </div>
+            <div class="seaocmapaign">
+                <h1 style="writing-mode: vertical-rl; color: white;">Web Design & Development</h1>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="featureprojects">
+        <img src="images/starwar.png" style="color: #004AAD;" class="starwar">
+        <h1 style="text-align: center; margin-top: 20px; color: #004AAD;">Some Featured Works</h1>
+        <h2 class="FEATUREDPROJECTS" style=" text-align: center; margin-top: 30px;">FEATURED PROJECTS</h2>
+    </div>
+
+
+    <div class="cards" style="margin-top: 70px;">
+        <div class="card">
+            <img src="images/nutrithings.jpeg" style="margin-top: 60px; " class="nutrithings">
+            <div class="designcreat" style="margin-left: 20px;">
+                <h1 style="font-size: 24px; color: black; text-align: left; font-size: 24px; padding-top: 34px;">Dry Chef</h1>
+                <p class="project__tags" style="color: black; text-align: left; font-size: 18px; padding-top: 34px;">
+                    Packaging Design, Social Media Content Creation And Management.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/fitvilatraining.jpg" style="" class="nutrithings">
+            <div class="designcreat" style="margin-left: 20px;">
+                <h1 style="font-size: 24px; color: black; text-align: left; font-size: 24px; padding-top: 34px;">Big Fat Essential</h1>
+                <p class="project__tags" style="color: black; text-align: left; font-size: 18px; padding-top: 34px;">
+                    Product Photoshoot, Social Media Content Creation And Management.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards" style="margin-top: 70px;">
+        <div class="card">
+            <img src="images/nutrithings.jpeg" style="margin-top: 60px; " class="nutrithings">
+            <div class="designcreat" style="margin-left: 20px;">
+                <h1 style="font-size: 24px; color: black; text-align: left; font-size: 24px; padding-top: 34px;">Dry Chef</h1>
+                <p class="project__tags" style="color: black; text-align: left; font-size: 18px; padding-top: 34px;">
+                    Packaging Design, Social Media Content Creation And Management.
+                </p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="images/fitvilatraining.jpg" style="" class="nutrithings">
+            <div class="designcreat" style="margin-left: 20px;">
+                <h1 style="font-size: 24px; color: black; text-align: left; font-size: 24px; padding-top: 34px;">Big Fat Essential</h1>
+                <p class="project__tags" style="color: black; text-align: left; font-size: 18px; padding-top: 34px;">
+                    Product Photoshoot, Social Media Content Creation And Management.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="thoughtfullprocess" style="background-color: #222222;">
+        <div class="headerbusines">
+            <img src="images/photo.jpg" class="workingphoto">
+        </div>
+        <div style="text-align: center;">
+            <p1 class="workingprocess">Our Working Process</p1>
+            <h2 class="thouhgt" style="color: white; margin-top: 20px;">THOUGHT FULL PROCESS</h2>
+        </div>
+        <div class="audiencedefinition">
+            <div class="framerworkvalue">
+                <img src="images/nutrithings.jpeg" style="width: 60px; height: 60px;" class="imagesfeame">
+                <h1 class="audiencess">Audience Definition And Value</h1>
+                <p class="audiences">Ok, so you want to grow your business. In order to build a framework to help you get there, we need to better understand the people that matter most to your success. Who are you trying to reach? What do you know about them? What actions
+                    do you want them to take? By defining your audiences, we can start to build a framework for how to engage with them.</p>
+            </div>
+            <div class="framerworkvalue">
+                <img src="images/nutrithings.jpeg" style="width: 60px; height: 60px;" class="imagesfeame">
+                <h1 class="audiencess">Audience Definition And Value</h1>
+                <p class="audiences">Ok, so you want to grow your business. In order to build a framework to help you get there, we need to better understand the people that matter most to your success. Who are you trying to reach? What do you know about them? What actions
+                    do you want them to take? By defining your audiences, we can start to build a framework for how to engage with them.</p>
+            </div>
+            <div class="framerworkvalue">
+                <img src="images/nutrithings.jpeg" style="width: 60px; height: 60px;" class="imagesfeame">
+                <h1 class="audiencess">Audience Definition And Value</h1>
+                <p class="audiences">Ok, so you want to grow your business. In order to build a framework to help you get there, we need to better understand the people that matter most to your success. Who are you trying to reach? What do you know about them? What actions
+                    do you want them to take? By defining your audiences, we can start to build a framework for how to engage with them.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <marquee width="100%" direction="left" height="100px" style=" font-size: 46px; text-transform: uppercase; color: black; font-weight: bold; background-color: #004AAD; padding-top: 26px;">
+        GET IN TOUCH
+    </marquee>
+    <div class="serviceout" style="background-color: #222222; padding-top: 90px; padding-bottom: 90px;">
+        <div class="cimplifeegood">
+            <div class="clutch">
+                <img src="images/cimplofeelogo (1).png" style="width: 80px; height: 80px;">
+                <div class="clutch" style="display: flex; gap: 30px; margin-top: 30px;">
+                    <div>
+                        <img src="images/product-review-1.png">
+                    </div>
+                    <div>
+                        <img src="images/product-review-1.png">
+                    </div>
+                </div>
+                <h1 style="color: white; margin-top: 20px;">IN</h1>
+            </div>
+            <div class="ourservice">
+                <h1 style="margin-bottom: 30px; color: #D9D9D9; font-size: 20px;">Our Services</h1>
+                <p style="margin-bottom: 30px; color: #D9D9D9; font-size: 16px;">UX/UI Design</p>
+                <p style="margin-bottom: 30px; color: #D9D9D9; font-size: 16px;">Web Development</p>
+                <p style="margin-bottom: 30px;  color: #D9D9D9; font-size: 16px;">DIgital Marketing</p>
+                <p style="margin-bottom: 30px; color: #D9D9D9; font-size: 16px;">Product Design</p>
+                <p style="margin-bottom: 30px; color: #D9D9D9; font-size: 16px;">Software Solutions</p>
+            </div>
+            <div class="ourservice">
+                <h1 style="margin-bottom: 30px; color: #D9D9D9; font-size: 20px;">Our Services</h1>
+                <p style="margin-bottom: 30px; color: #D9D9D9; font-size: 16px;">UX/UI Design</p>
+                <p style="margin-bottom: 30px; color: #D9D9D9; font-size: 16px;">Web Development</p>
+                <p style="margin-bottom: 30px;  color: #D9D9D9; font-size: 16px;">DIgital Marketing</p>
+                <p style="margin-bottom: 30px; color: #D9D9D9; font-size: 16px;">Product Design</p>
+                <p style="margin-bottom: 30px; color: #D9D9D9; font-size: 16px;">Software Solutions</p>
+            </div>
+            <div class="newsleeter">
+                <h1 style="margin-bottom: 30px; color: #D9D9D9; font-size: 30px;">Newsletter</h1>
+                <p style="margin-bottom: 30px; color: #D9D9D9; font-size: 16px; letter-spacing: 2px; ">Cimplifieis a full-service branding and creative agency specializing in brand development, graphic design, web development and marketing strategy. Join Us Today
+                </p>
+                <div class="enteremial" style="display: flex; gap: 30px;">
+                    <input type="text" placeholder="Enter Mail" style="padding: 7px 50px;">
+                    <i class="fa-solid fa-arrow-right" style="color: red;"></i>
+                </div>
+                <div class="bike" style="margin-top: 30px;">
+                    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                    <label for="vehicle1" style="margin-left: 30px; color: white; "> I have a bike</label><br>
+                </div>
+            </div>
+            <div class="sectionpra" style="flex-direction: column;">
+                <hr style=" margin-top: 40px; ">
+                <h2 style="margin-top: 40px; color: #D9D9D9;">India</h2>
+                <p style="margin-top: 30px; margin-bottom: 30px;color: #D9D9D9; letter-spacing: 1px;">IHDP Business Park, 3rd floor, Serenia Sector 127, Noida Uttar Pradesh</p>
+                <p1 style="color: #D9D9D9;">+91-8076805641</p1>
+            </div>
+
+        </div>
+        <div class="copyright" style="flex-direction: column; max-width: 1460px; margin: 0 auto;">
+            <hr style=" margin-top: 60px;">
+            <h2 style="color: #D9D9D9; margin-top: 50px; text-align: center;">Copyright @ All Rights Reserved 2024 Cimplifie Tech Solutions LLP</h2>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script>
+        //  var once = function(fn){
+        //     let called = false;
+
+        //     return function(...args){
+        //         if(called){
+        //             return undefined;
+        //         }
+        //         fn(...args);
+        //     }
+        //  };
+
+        //  let fn = (a,b,c)=>(a+b+c)
+        //  let oncefn = once(fn);
+        //  oncefn(1,2,3);
+        //  oncefn(2,3,4); 
+
+
+
+
+        var once = function(fn) {
+            let called = false; // Flag to keep track of whether the function has been called or not.
+            return function(...args) {
+                if (called) {
+                    return undefined; // Agar function pehle se hi call ho chuka hai, toh undefined return karo.
+                }
+                called = true; // Mark karo ki function ko call kar liya gaya hai.
+                return fn(...args); // Diye gaye arguments ke saath original function ko call karo.
+            };
+        };
+    </script>
+
+    <script>
+        function numCounter(tagId, maxCount, speed) {
+            var initialNumber = 0;
+
+            function counter() {
+                document.getElementById(tagId).innerHTML = initialNumber;
+                ++initialNumber;
+            }
+            var counterDelay = setInterval(counter, speed);
+
+            function totalTime() {
+                clearInterval(counterDelay);
+            }
+            var totalPeriod = speed * (maxCount);
+            setTimeout(totalTime, totalPeriod);
+        }
+
+        numCounter("Projects", 4, 100);
+        numCounter("Clients", 12, 400);
+        numCounter("Partners", 4, 10);
+    </script>
+    <script>
+        const swiperEl = document.querySelector('swiper-container')
+        Object.assign(swiperEl, {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            },
+        });
+        swiperEl.initialize();
+    </script>
+    <script>
+        // UPDATE: I was able to get this working again... Enjoy!
+
+        var cursor = document.querySelector('.cursor');
+        var cursorinner = document.querySelector('.cursor2');
+        var a = document.querySelectorAll('a');
+
+        document.addEventListener('mousemove', function(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            cursor.style.transform = `translate3d(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%), 0)`
+        });
+
+        document.addEventListener('mousemove', function(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+            cursorinner.style.left = x + 'px';
+            cursorinner.style.top = y + 'px';
+        });
+
+        document.addEventListener('mousedown', function() {
+            cursor.classList.add('click');
+            cursorinner.classList.add('cursorinnerhover')
+        });
+
+        document.addEventListener('mouseup', function() {
+            cursor.classList.remove('click')
+            cursorinner.classList.remove('cursorinnerhover')
+        });
+
+        a.forEach(item => {
+            item.addEventListener('mouseover', () => {
+                cursor.classList.add('hover');
+            });
+            item.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+            });
+        })
+    </script>
+
+
+</body>
+
+</html>

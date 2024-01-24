@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    .row::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .column {
+        float: left;
+        width: 100%;
+        padding: 10px;
+    }
+    /* Responsive columns */
+    
+    @media screen and (min-width: 600px) {
+        .column {
+            width: 50%;
+        }
+    }
+    
+    @media screen and (min-width: 900px) {
+        .column {
+            width: 25%;
+        }
+    }
+    /* Style the counter cards */
+    
+    .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        padding: 16px;
+        text-align: center;
+        color: white;
+    }
+    
+    .galaxy {
+        background-image: url('/images/gallaxy.jpg');
+        width: 100%;
+        /* height: 40vh; */
+        border-radius: 150px;
+        background-size: cover;
+    }
+    
+    #Partners,
+    #Projects,
+    #Clients {
+        font-size: 3vw;
+        /* Adjust the font size for responsiveness */
+        font-weight: 700;
+        line-height: 1.16;
+    }
+    
+    .totalyears {
+        font-size: 16px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--clr-common-white);
+        font-family: "Archivo", sans-serif;
+        line-height: 1.5;
+        margin-bottom: 0;
+        letter-spacing: 1px;
+    }
+    /* Additional style for the rotating text */
+    
+    #rotatingText {
+        margin-top: 20px;
+    }
+    
+    .text {
+        letter-spacing: 0.2em;
+        /* Adjust as needed */
+        font-weight: bold;
+        color: white;
+    }
+</style>
+<style>
+    .text {
+        font-weight: 600;
+        letter-spacing: 1.7px;
+        text-transform: uppercase;
+        font-family: 'Kanit';
+        font-size: 17px;
+        fill: #111;
+        text-shadow: 2px 0px #ffffff;
+    }
+    
+    #rotatingText {
+        animation-name: rotate-circle;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes rotate-circle {
+        to {
+            transform: rotate(1turn);
+        }
+    }
+    
+    .main {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+    }
+    
+    .main img {
+        position: absolute;
+    }
+    
+    .main img {
+        position: absolute;
+        animation-name: rotate-circle;
+        animation-direction: reverse;
+        animation-duration: 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        filter: drop-shadow(0px 0px 5px #333);
+    }
+</style>
+</style>
+
+<body>
+    <div class="galaxy">
+        <div class="row">
+            <div class="column">
+                <div class="card" style="margin-top: 40px;">
+                    <h3><span id="Partners">0</span></h3>
+                    <h3 class="totalyears">ToTal Years of Experience</h3>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card" style="margin-top: 40px;">
+                    <h3><span id="Projects">0</span>+</h3>
+                    <h3 class="totalyears">Unique Clients We Serve</h3>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card">
+                    <div class="main">
+
+                        <img src="images/Screenshot 2024-01-18 023201.png" width="50" height="50">
+                        <svg id="rotatingText" viewBox="0 0 200 200" width="200" height="200">
+                          <defs>
+                            <path id="circle" d="M 100, 100
+                                    m -75, 0
+                                    a 75, 75 0 1, 0 150, 0
+                                    a 75, 75 0 1, 0 -150, 0
+                                    ">
+                            </path>
+                          </defs>
+                          <text width="400">
+                            <textPath alignment-baseline="top" xlink:href="#circle" class="text" style="letter-spacing: 9px; font-weight:bold; color:white">
+                             Winning Awards Digital Agency
+                            </textPath>
+                          </text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card" style="margin-top: 40px;">
+                    <h3><span id="Clients">0</span>+</h3>
+                    <h3 class="totalyears">Team Members</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function numCounter(tagId, maxCount, speed) {
+            var initialNumber = 0;
+
+            function counter() {
+                document.getElementById(tagId).innerHTML = initialNumber;
+                ++initialNumber;
+            }
+            var counterDelay = setInterval(counter, speed);
+
+            function totalTime() {
+                clearInterval(counterDelay);
+            }
+            var totalPeriod = speed * (maxCount);
+            setTimeout(totalTime, totalPeriod);
+        }
+
+        numCounter("Projects", 4, 100);
+        numCounter("Clients", 12, 400);
+        numCounter("Partners", 4, 10);
+    </script>
+</body>
+
+</html>
